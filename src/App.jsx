@@ -2,14 +2,23 @@
 import { useEffect, useState } from 'react'
 import './App.css'
 import Navbar from './Components/Navbar/index.jsx'
-import data from './data.js'
 import StatusPage from './Components/StatusPage/index.jsx'
 import PriorityPage from './Components/PriorityPage/index.jsx'
 import UserPage from './Components/UserPage/index.jsx'
 function App() {
-  const [tickets, setTickets] = useState(data.tickets);
+  const [tickets, setTickets] = useState([]);
+  const [users, setUsers] = useState([]);
   const [sorting, setSorting] = useState("title");
   const [grouping, setGrouping] = useState(localStorage.getItem('grouping') || 'Status');
+  useEffect(() => {
+    fetch('https://api.quicksell.co/v1/internal/frontend-assignment')
+      .then(response => response.json())
+      .then(data => {
+        setTickets(data.tickets);
+        setUsers(data.users);
+      })
+  }, []);
+  
   useEffect(() => {
     let sortedTickets = [...tickets];
     if (sorting === "title") {
@@ -49,7 +58,7 @@ function App() {
 
         grouping == "Status" ? <StatusPage data={groupByStatus} />
           : grouping == "Priority" ? <PriorityPage data={groupByPriority} /> :
-            <UserPage data={groupByUser} name={data.users} />
+            <UserPage data={groupByUser} name={users} />
 
       }
 

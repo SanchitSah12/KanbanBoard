@@ -3,4 +3,10 @@ body{
   background-color: #f4f5f8;
   margin: 0;
   overflow: auto;
+  zoom: 80%;
+  -moz-transform: scale(0.8);
+
+  @media screen and (max-width: 768px) {
+    zoom: 100%;
+  }
 }
