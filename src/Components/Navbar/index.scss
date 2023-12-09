@@ -5,7 +5,7 @@
   flex-direction: column;
   justify-content: space-between;
   padding: 15px 20px;
-  height: 60px;
+  height: 70px;
   background-color: #fff;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   position: absolute;
@@ -27,21 +27,34 @@
     }
   }
 
-  select {
+  .select-div {
     font-size: 14px;
-    width: 100px;
+    display: flex;
+    align-items: center;
     text-align: center;
-    color: #666; // Soft text color
+    color: #666; 
     border: 1 px solid rgba(0, 0, 0, 0.5);
-    border-radius: 5px; // Rounded corners
+    border-radius: 5px; 
     padding: 5px;
-    background-color: white; // Light background
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1); // Subtle shadow for a modern look
-    appearance: none; // Removes the default browser styling
+    background-color: white; 
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1); 
+    margin-bottom: 5px;
+    select{
+      appearance: none; 
+      border: none;
+      width: 150px;
+      height: 20px;
+      font-weight: 400;
+      &:focus{
+        outline: none; 
+      }
+    }
   }
 
   option {
-    border-radius: 4px;
+    
+    font-size: 14px;
+    padding-left: 100px;
   }
 }
 .navbar {

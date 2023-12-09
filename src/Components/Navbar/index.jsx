@@ -32,6 +32,9 @@ const Navbar = ({ grouping, setGrouping, sorting, setSorting }) => {
             document.removeEventListener('mousedown', handleClickOutside);
         };
     }, []);
+
+    const groupingRef = useRef(null);
+    const sortingRef = useRef(null);
     return (
         <>
             <nav className='navbar'>
@@ -45,19 +48,29 @@ const Navbar = ({ grouping, setGrouping, sorting, setSorting }) => {
                 <div ref={optionsRef} className='options'>
                     <div className='option'>
                         <label htmlFor="select" >Grouping:</label>
-                        <select id="select" className='group' value={grouping} onChange={handleGroupingChange}>
-                            <option value="Status">Status</option>
-                            <option value="User">User</option>
-                            <option value="Priority">Priority</option>
-                        </select>
+                        <div className='select-div'>
+                            <select ref={groupingRef} id="select" className='group' value={grouping} onChange={handleGroupingChange}>
+                                <option value="Status">Status</option>
+                                <option value="User">User</option>
+                                <option value="Priority">Priority</option>
+                            </select>
+                            <div onClick={() => groupingRef.current.click()}>
+                                <KeyboardArrowDownIcon fontSize='small' />
+                            </div>
+                        </div>
                     </div>
 
                     <div className='option'>
                         <label htmlFor="select">Ordering:</label>
-                        <select className='group' value={sorting} onChange={handleSortingChange}>
-                            <option value="title">Title</option>
-                            <option value="priority">Priority</option>
-                        </select>
+                        <div className='select-div'>
+                            <select ref={sortingRef} className='group' value={sorting} onChange={handleSortingChange}>
+                                <option value="title">Title</option>
+                                <option value="priority">Priority</option>
+                            </select>
+                            <div onClick={() => sortingRef.current.click()}>
+                                <KeyboardArrowDownIcon fontSize='small' />
+                            </div>
+                        </div>
                     </div>
 
                 </div>
