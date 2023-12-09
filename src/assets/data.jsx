@@ -2,10 +2,10 @@ import { AllOut, Cancel, CheckCircle, CircleOutlined, MoreVert, Opacity, SignalC
 
 const names = {
     0: {name:"No Priority",icon:<MoreVert/>},
-    1: {name:"Urgent",icon:<Warning/>},
-    2: {name:"High",icon:<SignalCellularAlt/>},
-    3: {name:"Medium",icon:<SignalCellularAlt2Bar/>},
-    4: {name:"Low",icon:<SignalCellularAlt1Bar/>},
+    4: {name:"Urgent",icon:<Warning style={{color:"orange"}}/>},
+    3: {name:"High",icon:<SignalCellularAlt/>},
+    2: {name:"Medium",icon:<SignalCellularAlt2Bar/>},
+    1: {name:"Low",icon:<SignalCellularAlt1Bar/>},
   }
 
 
