@@ -5,6 +5,8 @@ import Navbar from './Components/Navbar/index.jsx'
 import StatusPage from './Components/StatusPage/index.jsx'
 import PriorityPage from './Components/PriorityPage/index.jsx'
 import UserPage from './Components/UserPage/index.jsx'
+
+
 function App() {
   const [tickets, setTickets] = useState([]);
   const [users, setUsers] = useState([]);
@@ -18,7 +20,7 @@ function App() {
         setUsers(data.users);
       })
   }, []);
-  
+
   useEffect(() => {
     let sortedTickets = [...tickets];
     if (sorting === "title") {
