@@ -1,0 +1,77 @@
+.card {
+  /* Add shadows to create the "card" effect */
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.1);
+  transition: 0.3s;
+  display: flex;
+  flex-direction: column;
+  width: 350px;
+  height: 120px;
+  background-color: #fff;
+  border-radius: 4px;
+  padding: 10px;
+  margin-bottom: 16px;
+  font-family: "Roboto", sans-serif;
+
+  .title{
+    display: flex;
+    align-items: flex-start;
+    .status-icon{
+
+      margin-right: 10px;
+    }
+  }
+  .first-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 30px;
+    p {
+      font-size: 15px;
+      color: #666;
+      font-weight: 400;
+    }
+    img {
+      width: 30px;
+      height: 30px;
+      object-fit: cover;
+      border-radius: 100%;
+    }
+  }
+  h4 {
+    margin: 0;
+    // display: flex;
+    // align-items: center;
+    padding-right: 40px;
+    min-height: 50px;
+  }
+  .card-bottom {
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    color:#666;
+    .shadows {
+        display: flex;
+        justify-content: center;
+        border: 1px solid rgba(0, 0, 0, 0.1);
+      border-radius: 5px  ;
+        margin-right: 10px;
+    }
+    .feature-req {
+      display: flex;
+      justify-content: start;
+      align-items: center;
+      border: 1px solid rgba(0, 0, 0, 0.1);
+      border-radius: 5px;
+      padding-left: 3px;
+      p{
+        margin: 5px;
+
+      }
+    }
+  }
+}
+
+/* On mouse-over, add a deeper shadow */
+.card:hover {
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+}
