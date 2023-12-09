@@ -1,11 +1,11 @@
-import { Cancel, CheckCircle, CircleOutlined, MoreVert, SignalCellularAlt, SignalCellularAlt1Bar, SignalCellularAlt2Bar, Tonality, Warning } from "@mui/icons-material"
+import { AllOut, Cancel, CheckCircle, CircleOutlined, MoreVert, Opacity, SignalCellularAlt, SignalCellularAlt1Bar, SignalCellularAlt2Bar, Tonality, Warning } from "@mui/icons-material"
 
 const names = {
     0: {name:"No Priority",icon:<MoreVert/>},
-    4: {name:"Urgent",icon:<Warning style={{color:"orange"}}/>},
-    3: {name:"High",icon:<SignalCellularAlt/>},
-    2: {name:"Medium",icon:<SignalCellularAlt2Bar/>},
-    1: {name:"Low",icon:<SignalCellularAlt1Bar/>},
+    1: {name:"Urgent",icon:<Warning/>},
+    2: {name:"High",icon:<SignalCellularAlt/>},
+    3: {name:"Medium",icon:<SignalCellularAlt2Bar/>},
+    4: {name:"Low",icon:<SignalCellularAlt1Bar/>},
   }
 
 
